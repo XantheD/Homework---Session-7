@@ -20,10 +20,95 @@ import UIKit
 //BONUS: Create an `authenticate` function which takes an email and password parameter and returns true or false if the email and password combination is valid.
 //EXTRA BONUS: Create a class `AuthenticationManager` which has an `authenticate` function which does the above. Use this in your solution.
 
-struct userLoginPage {
+
+
+struct User {
     var Email: String
     var Password: String
 }
+
+// Played with a few different Regex codes but in the end, the one that Adam found seemed to be the simplest. This one: http://benscheirman.com/2014/06/regex-in-swift/
+
+
+class Regex {
+    let internalExpression: NSRegularExpression
+    let pattern: String
+    
+    init(_ pattern: String) {
+        self.pattern = pattern
+        var error: NSError?
+        self.internalExpression = NSRegularExpression(pattern: pattern, options: .CaseInsensitive, error: &error)!
+    }
+    
+    func test(input: String) -> Bool {
+        let matches = self.internalExpression.matchesInString(input, options: nil, range:NSMakeRange(0, count(input)))
+        return matches.count > 0
+    }
+}
+
+infix operator =~ {}
+
+func =~ (input: String, pattern: String) -> Bool {
+    return Regex(pattern).test(input)
+}
+
+//Rest of code
+
+let Users = [
+    User(Email: "xanthe.dobbie@gmail.com", Password: "password1"),
+    User(Email: "xanthe.dobbie@hotmail.com", Password: "password2"),
+    User(Email: "12334434ljkafgd.dfgddj@hfjfjj.h", Password:"password3"),
+    User(Email: "thisemail@email.com", Password: "short1"),
+]
+
+for User in Users {
+if User.Email =~ "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"{
+        println ("Email address is valid")
+}
+else {
+    println("Please check that you have entered a valid email address")
+}
+}
+
+for User in Users {
+if User.Password =~ "\\w{8}" {
+        println("Password is valid")
+}
+else {
+    println("Please enter a password that has a minimum of 8 characters")
+}
+}
+
+//So now 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

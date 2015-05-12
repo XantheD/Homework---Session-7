@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>E1BD4EDB-35EE-48A2-997B-9F00071ACAF3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Homework - Session 7</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FECC40E97641C019CAAE0C1E0D1A461A48BE5B8F</key>
+		<string>https://github.com/XantheD/Homework---Session-7.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Homework - Session 7.playground</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FECC40E97641C019CAAE0C1E0D1A461A48BE5B8F</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/XantheD/Homework---Session-7.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FECC40E97641C019CAAE0C1E0D1A461A48BE5B8F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FECC40E97641C019CAAE0C1E0D1A461A48BE5B8F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Homework---Session-7</string>
+		</dict>
+	</array>
+</dict>
+</plist>
