@@ -54,12 +54,23 @@ func =~ (input: String, pattern: String) -> Bool {
 
 //Rest of code
 
-let Users = [
-    User(Email: "xanthe.dobbie@gmail.com", Password: "password1"),
-    User(Email: "xanthe.dobbie@hotmail.com", Password: "password2"),
-    User(Email: "12334434ljkafgd.dfgddj@hfjfjj.h", Password:"password3"),
-    User(Email: "thisemail@email.com", Password: "short1"),
-]
+var Users = [User]()
+
+Users.append(
+    User(Email: "xanthe.dobbie@gmail.com", Password:"password1")
+)
+
+Users.append(
+    User(Email:"xanthe.dobbie@hotmail.com", Password: "password2")
+)
+
+Users.append(
+    User(Email: "newemail@email.email", Password: "password3")
+)
+
+Users.append(
+    User(Email:"anotherwrongthing.dumb", Password:"short")
+)
 
 for User in Users {
 if User.Email =~ "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"{
@@ -75,11 +86,38 @@ if User.Password =~ "\\w{8}" {
         println("Password is valid")
 }
 else {
-    println("Please enter a password that has a minimum of 8 characters")
+    println("Please enter a password that has at least 8 characters")
 }
 }
 
-//So now 
+var enteredEmail = "xanthe.dobbie@gmail.com"
+var enteredPassword = "wrongpassword"
+
+var userAuthenticated = false
+
+for User in Users {
+    if enteredEmail == User.Email && enteredPassword == User.Password {
+        userAuthenticated = true
+        break
+    }
+}
+
+if userAuthenticated {
+    println("Access granted")
+}
+
+else {
+    println ("Access denied")
+}
+
+if let User = (Users.filter { $0.Email == enteredEmail && $0.Password == enteredPassword}).first {
+    println("Access granted to \(User.Email)")
+}
+else {
+    println("Access denied")
+}
+
+
 
 
 
